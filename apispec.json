@@ -384,6 +384,17 @@
                     },
                     "status": {
                       "type": "string"
+                    },
+                    "data" : {
+                      "type": "object",
+                      "properties": {
+                        "transactionId" : {
+                          "type": "number"
+                        },
+                        "amount" : {
+                          "type": "number"
+                        }
+                      }
                     }
                   }
                 }
@@ -412,7 +423,6 @@
         }
       }
     }
-
   },
   "components": {
     "securitySchemes": {
