@@ -1,0 +1,490 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API DOCUMENTATION",
+    "description": "API DOCUMENTATION",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api"
+    }
+  ],
+  "paths": {
+    "/register" : {
+      "post": {
+        "tags": ["Authentication API"],
+        "description": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Register"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login Success",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "$ref": "#/components/schemas/LoggedInOrRegistered"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Register Failed",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Authentication API"],
+        "description": "Login",
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login Success",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "$ref": "#/components/schemas/LoggedInOrRegistered"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Login Failed",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products/{categoryId}": {
+      "get": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Products API"],
+        "summary": "Get List Products by Category",
+        "description": "Get List Products by Category",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "description": "Category Id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Get All Products",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Products"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart" : {
+      "get": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Products API"],
+        "summary": "Get All Product in Cart",
+        "description": "Get All Product in Cart",
+        "responses": {
+          "200": {
+            "description": "Success Get All Product in Cart",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Products"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed Get All Product in Cart",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 500
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Products API"],
+        "summary": "Add Product to Cart",
+        "description": "Add Product to Cart",
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "productId" : {
+                    "type": "number",
+                    "required": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success Add Product to Cart",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed Add Product to Cart",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 500
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart/{productId}" : {
+      "delete": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Products API"],
+        "summary": "Delete Product from Cart",
+        "description": "Delete Product from Cart",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "description": "Product Id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Delete Product from Cart",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed Delete Product from Cart",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "default": 500
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart/shipment" : {
+      "post": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Products API"],
+        "summary": "Checkout Product",
+        "description": "Checkout Product",
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "productId" : {
+                    "type": "array",
+                    "minimum": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success Add Product to Shipment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed Add Product to Shipment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "default": 500
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  },
+  "components": {
+    "securitySchemes": {
+      "JWT" : {
+        "type": "apiKey",
+        "in": "header",
+        "name": "token",
+        "description": "Authentication for API"
+      }
+    },
+    "schemas": {
+      "Login": {
+        "type": "object",
+        "properties": {
+          "username" : {
+            "type": "string",
+            "required": true
+          },
+          "password" : {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "Register" : {
+        "type": "object",
+        "properties": {
+          "username" : {
+            "type": "string",
+            "required": true
+          },
+          "email" : {
+            "type": "string",
+            "required": true
+          },
+          "password" : {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "LoggedInOrRegistered" : {
+        "type": "object",
+        "properties": {
+          "id" : {
+            "type": "number"
+          },
+          "username" : {
+            "type": "string"
+          },
+          "token" : {
+            "type": "string"
+          }
+        }
+      },
+      "Products" : {
+        "type": "object",
+        "properties": {
+          "id" : {
+            "type": "number"
+          },
+          "name" : {
+            "type": "string"
+          },
+          "price" : {
+            "type": "number"
+          },
+          "category" : {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
