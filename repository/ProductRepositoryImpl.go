@@ -11,6 +11,10 @@ import (
 type ProductRepositoryImpl struct {
 }
 
+func NewProductRepository() ProductRepository {
+	return &ProductRepositoryImpl{}
+}
+
 func (repository *ProductRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, product domain.Product) domain.Product {
 	SQL := `INSERT INTO "product"("name", "category_id", "price") VALUES ($1, $2, $3) RETURNING id`
 	var lastInsertId int

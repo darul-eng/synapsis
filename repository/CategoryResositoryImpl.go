@@ -11,6 +11,10 @@ import (
 type CategoryRepositoryImpl struct {
 }
 
+func NewCategoryRepository() CategoryRepository {
+	return &CategoryRepositoryImpl{}
+}
+
 func (repository *CategoryRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, category domain.Category) domain.Category {
 	SQL := `INSERT INTO "category"("name") VALUES ($1) RETURNING id`
 	var lastInsertId int
@@ -40,4 +44,3 @@ func (repository *CategoryRepositoryImpl) FindById(ctx context.Context, tx *sql.
 		return category, errors.New("category is not found")
 	}
 }
-

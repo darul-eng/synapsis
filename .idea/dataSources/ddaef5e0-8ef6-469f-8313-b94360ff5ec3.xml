@@ -19,7 +19,7 @@
 16392||-9223372036854775808|T|G
 16392||10|T|G
 16392||16391|T|G</Grants>
-      <IntrospectionStateNumber>934</IntrospectionStateNumber>
+      <IntrospectionStateNumber>987</IntrospectionStateNumber>
       <ServerVersion>12.13</ServerVersion>
       <StartupTime>1676682290</StartupTime>
       <TimeZones>true ACDT
@@ -1475,7 +1475,7 @@ false posixrules
 13163||10|C|G
 13163||-9223372036854775808|U|G
 13163||10|U|G</Grants>
-      <IntrospectionStateNumber>934</IntrospectionStateNumber>
+      <IntrospectionStateNumber>987</IntrospectionStateNumber>
       <ObjectId>25062</ObjectId>
       <OwnerName>admin</OwnerName>
     </database>
@@ -4733,46 +4733,308 @@ false posixrules
     <schema id="259" parent="10" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>934</IntrospectionStateNumber>
+      <IntrospectionStateNumber>987</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>275</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <table id="260" parent="259" name="schema_migrations">
-      <ObjectId>25063</ObjectId>
-      <StateNumber>928</StateNumber>
+    <sequence id="260" parent="259" name="cart_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>25285</ObjectId>
+      <StateNumber>980</StateNumber>
+      <OwnerName>admin</OwnerName>
+    </sequence>
+    <sequence id="261" parent="259" name="category_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>25273</ObjectId>
+      <StateNumber>977</StateNumber>
+      <OwnerName>admin</OwnerName>
+    </sequence>
+    <sequence id="262" parent="259" name="product_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>25261</ObjectId>
+      <StateNumber>974</StateNumber>
+      <OwnerName>admin</OwnerName>
+    </sequence>
+    <sequence id="263" parent="259" name="transaction_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>25249</ObjectId>
+      <StateNumber>971</StateNumber>
+      <OwnerName>admin</OwnerName>
+    </sequence>
+    <sequence id="264" parent="259" name="user_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>25234</ObjectId>
+      <StateNumber>968</StateNumber>
+      <OwnerName>admin</OwnerName>
+    </sequence>
+    <table id="265" parent="259" name="cart">
+      <ObjectId>25287</ObjectId>
+      <StateNumber>980</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>admin</OwnerName>
     </table>
-    <column id="261" parent="260" name="version">
+    <table id="266" parent="259" name="category">
+      <ObjectId>25275</ObjectId>
+      <StateNumber>977</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin</OwnerName>
+    </table>
+    <table id="267" parent="259" name="product">
+      <ObjectId>25263</ObjectId>
+      <StateNumber>974</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin</OwnerName>
+    </table>
+    <table id="268" parent="259" name="schema_migrations">
+      <ObjectId>25063</ObjectId>
+      <StateNumber>981</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin</OwnerName>
+    </table>
+    <table id="269" parent="259" name="transaction">
+      <ObjectId>25251</ObjectId>
+      <StateNumber>971</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin</OwnerName>
+    </table>
+    <table id="270" parent="259" name="user">
+      <ObjectId>25236</ObjectId>
+      <StateNumber>968</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>admin</OwnerName>
+    </table>
+    <column id="271" parent="265" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;cart_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>980</StateNumber>
+      <SequenceId>25285</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="272" parent="265" name="product_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>980</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="273" parent="265" name="amount">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>980</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="274" parent="265" name="cart_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25291</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>980</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="275" parent="265" name="cart_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25292</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>980</StateNumber>
+      <UnderlyingIndexId>25291</UnderlyingIndexId>
+    </key>
+    <column id="276" parent="266" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;category_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>977</StateNumber>
+      <SequenceId>25273</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="277" parent="266" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>977</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="278" parent="266" name="category_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25279</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>977</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="279" parent="266" name="category_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25280</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>977</StateNumber>
+      <UnderlyingIndexId>25279</UnderlyingIndexId>
+    </key>
+    <column id="280" parent="267" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;product_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>974</StateNumber>
+      <SequenceId>25261</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="281" parent="267" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>974</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="282" parent="267" name="category_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>974</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="283" parent="267" name="price">
+      <DasType>double precision|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>974</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="284" parent="267" name="product_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25267</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>974</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="285" parent="267" name="product_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25268</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>974</StateNumber>
+      <UnderlyingIndexId>25267</UnderlyingIndexId>
+    </key>
+    <column id="286" parent="268" name="version">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>899</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="262" parent="260" name="dirty">
+    <column id="287" parent="268" name="dirty">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>899</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <index id="263" parent="260" name="schema_migrations_pkey">
+    <index id="288" parent="268" name="schema_migrations_pkey">
       <ColNames>version</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25066</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>928</StateNumber>
+      <StateNumber>981</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="264" parent="260" name="schema_migrations_pkey">
+    <key id="289" parent="268" name="schema_migrations_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25067</ObjectId>
       <Primary>1</Primary>
       <StateNumber>899</StateNumber>
       <UnderlyingIndexId>25066</UnderlyingIndexId>
+    </key>
+    <column id="290" parent="269" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;transaction_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>971</StateNumber>
+      <SequenceId>25249</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="291" parent="269" name="user_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>971</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="292" parent="269" name="amount">
+      <DasType>double precision|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>971</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="293" parent="269" name="transaction_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25255</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>971</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="294" parent="269" name="transaction_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25256</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>971</StateNumber>
+      <UnderlyingIndexId>25255</UnderlyingIndexId>
+    </key>
+    <column id="295" parent="270" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>968</StateNumber>
+      <SequenceId>25234</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="296" parent="270" name="username">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>968</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="297" parent="270" name="email">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>968</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="298" parent="270" name="password">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>968</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="299" parent="270" name="user_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25243</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>968</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="300" parent="270" name="user_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>25244</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>968</StateNumber>
+      <UnderlyingIndexId>25243</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

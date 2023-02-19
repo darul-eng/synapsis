@@ -10,6 +10,10 @@ import (
 type CartRepositoryImpl struct {
 }
 
+func NewCartRepository() CartRepository {
+	return &CartRepositoryImpl{}
+}
+
 func (repository *CartRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, cart domain.Cart) domain.Cart {
 	SQL := `INSERT INTO "cart"("product_id", "amount") VALUES ($1, $2) RETURNING id`
 	var lastInsertId int
@@ -46,4 +50,3 @@ func (repository *CartRepositoryImpl) FindAll(ctx context.Context, tx *sql.Tx) [
 
 	return carts
 }
-

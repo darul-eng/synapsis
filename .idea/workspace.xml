@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92115583-9f76-4c5e-b294-465e9bf8e86e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3/storage_v2/_src_/database/db_synapsis.Jx8SHw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3/storage_v2/_src_/database/db_synapsis.Jx8SHw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apispec.json" beforeDir="false" afterPath="$PROJECT_DIR$/apispec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrations/20230218131520_create_tabel_user.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrations/20230218131520_create_tabel_user.up.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/domain/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/domain/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/CartRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/CartRepositoryImpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/CategoryResositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/CategoryResositoryImpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/ProductRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/ProductRepositoryImpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/TransactionRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/TransactionRepositoryImpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/UserRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/UserRepository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/UserRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/UserRepositoryImpl.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,37 +47,99 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/media/ubuntu/New Volume/4-PROJECT/tes-synapsis/helper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/media/ubuntu/New Volume/4-PROJECT/tes-synapsis/helper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "PostgreSQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/helper" />
+      <recent name="$PROJECT_DIR$/model/web" />
+      <recent name="$PROJECT_DIR$/model/web/User" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Test.TestLogin in tes-synapsis/service/test">
+    <configuration name="TestCreateUser in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tes-synapsis" />
+      <working_directory value="$PROJECT_DIR$/service/test" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tes-synapsis/service/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCreateUser\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGenerateToken in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tes-synapsis" />
+      <working_directory value="$PROJECT_DIR$/service/test" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tes-synapsis/service/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestGenerateToken\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLogin in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tes-synapsis" />
+      <working_directory value="$PROJECT_DIR$/service/test" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tes-synapsis/service/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestLogin\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRegister in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tes-synapsis" />
+      <working_directory value="$PROJECT_DIR$/service/test" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tes-synapsis/service/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRegister\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestVerifyToken in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tes-synapsis" />
+      <working_directory value="$PROJECT_DIR$/service/test" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tes-synapsis/service/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestVerifyToken\E$" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="SwaggerCodegen">
       <option name="activeConfigurationType" value="FILE" />
       <option name="configurationPath" value="" />
@@ -83,6 +156,15 @@
       <option name="specificationPath" value="$PROJECT_DIR$/apispec.json" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestLogin in tes-synapsis/service/test" />
+        <item itemvalue="Go Test.TestRegister in tes-synapsis/service/test" />
+        <item itemvalue="Go Test.TestCreateUser in tes-synapsis/service/test" />
+        <item itemvalue="Go Test.TestVerifyToken in tes-synapsis/service/test" />
+        <item itemvalue="Go Test.TestGenerateToken in tes-synapsis/service/test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

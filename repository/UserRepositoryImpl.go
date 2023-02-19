@@ -11,6 +11,10 @@ import (
 type UserRepositoryImpl struct {
 }
 
+func NewUserRepository() UserRepository {
+	return &UserRepositoryImpl{}
+}
+
 func (repository *UserRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, user domain.User) domain.User {
 	SQL := `INSERT INTO "user"("username", "email", "password") VALUES ($1, $2, $3) RETURNING id`
 	var lastInsertId int
@@ -24,15 +28,15 @@ func (repository *UserRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, user
 	return user
 }
 
-func (repository *UserRepositoryImpl) Find(ctx context.Context, tx *sql.Tx, username string, password string) (domain.User, error) {
-	SQL := `SELECT "id", "username" FROM "user" WHERE "username" = $1 AND "password" = $2`
-	rows, err := tx.QueryContext(ctx, SQL, username, password)
+func (repository *UserRepositoryImpl) Find(ctx context.Context, tx *sql.Tx, username string) (domain.User, error) {
+	SQL := `SELECT "id", "username", "password" FROM "user" WHERE "username" = $1`
+	rows, err := tx.QueryContext(ctx, SQL, username)
 	helper.PanicIfError(err)
 	defer rows.Close()
 
 	user := domain.User{}
 	if rows.Next() {
-		err := rows.Scan(&user.Id, &user.Username)
+		err := rows.Scan(&user.Id, &user.Username, &user.Password)
 		helper.PanicIfError(err)
 
 		return user, nil
