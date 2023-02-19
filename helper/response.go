@@ -5,6 +5,7 @@ import (
 	"tes-synapsis/model/api/cart"
 	category "tes-synapsis/model/api/category"
 	"tes-synapsis/model/api/product"
+	"tes-synapsis/model/api/transaction"
 	"tes-synapsis/model/domain"
 )
 
@@ -59,4 +60,13 @@ func ToCartResponses(datas []domain.Cart) []cart.CartResponse {
 	}
 
 	return carts
+}
+
+func ToTransactionResponse(data domain.Transaction) transaction.TransactionResponse {
+	return transaction.TransactionResponse{
+		Id:        data.Id,
+		Amount:    data.Amount,
+		Status:    data.Status,
+		CreatedAt: data.CreatedAt,
+	}
 }

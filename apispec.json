@@ -238,7 +238,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "productId" : {
+                  "product_id" : {
                     "type": "number",
                     "required": true
                   }
@@ -361,9 +361,11 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "productId" : {
-                    "type": "array",
-                    "minimum": 1
+                  "user_id" : {
+                    "type": "number"
+                  },
+                  "amount" : {
+                    "type": "number"
                   }
                 }
               }
@@ -388,11 +390,20 @@
                     "data" : {
                       "type": "object",
                       "properties": {
-                        "transactionId" : {
+                        "id" : {
+                          "type": "number"
+                        },
+                        "user_id" : {
                           "type": "number"
                         },
                         "amount" : {
                           "type": "number"
+                        },
+                        "status" : {
+                          "type": "string"
+                        },
+                        "created_at" : {
+                          "type": "string"
                         }
                       }
                     }

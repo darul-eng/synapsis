@@ -16,9 +16,9 @@ func NewUserRepository() UserRepository {
 }
 
 func (repository *UserRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, user domain.User) domain.User {
-	SQL := `INSERT INTO "user"("username", "email", "password") VALUES ($1, $2, $3) RETURNING id`
+	SQL := `INSERT INTO "user"("username", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING id`
 	var lastInsertId int
-	result := tx.QueryRowContext(ctx, SQL, user.Username, user.Email, user.Password)
+	result := tx.QueryRowContext(ctx, SQL, user.Username, user.Email, user.Password, user.CreatedAt, user.UpdatedAt)
 
 	err := result.Scan(&lastInsertId)
 	helper.PanicIfError(err)

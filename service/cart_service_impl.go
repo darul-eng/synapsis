@@ -8,6 +8,7 @@ import (
 	"tes-synapsis/model/api/cart"
 	"tes-synapsis/model/domain"
 	"tes-synapsis/repository"
+	"time"
 )
 
 type CartServiceImpl struct {
@@ -31,6 +32,8 @@ func (service *CartServiceImpl) Create(ctx context.Context, request cart.CartCre
 	cart := domain.Cart{
 		ProductId: request.ProductId,
 		Amount:    1,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
 	}
 
 	service.CartRepository.Save(ctx, tx, cart)
@@ -46,10 +49,20 @@ func (service *CartServiceImpl) FindAll(ctx context.Context) []cart.CartResponse
 	return helper.ToCartResponses(carts)
 }
 
-func (service *CartServiceImpl) Delete(ctx context.Context, productId int) {
+func (service *CartServiceImpl) Delete(ctx context.Context, cartId int) {
 	tx, err := service.DB.Begin()
 	helper.PanicIfError(err)
 	defer helper.CommitOrRollback(tx)
 
-	service.CartRepository.Delete(ctx, tx, productId)
+	service.CartRepository.Delete(ctx, tx, cartId)
+}
+
+func (service *CartServiceImpl) FindById(ctx context.Context, cartId int) cart.CartResponse {
+	tx, err := service.DB.Begin()
+	helper.PanicIfError(err)
+	defer helper.CommitOrRollback(tx)
+
+	cart := service.CartRepository.FindById(ctx, tx, cartId)
+
+	return helper.ToCartResponse(cart)
 }

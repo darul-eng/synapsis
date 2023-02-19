@@ -16,9 +16,9 @@ func NewProductRepository() ProductRepository {
 }
 
 func (repository *ProductRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, product domain.Product) domain.Product {
-	SQL := `INSERT INTO "product"("name", "category_id", "price") VALUES ($1, $2, $3) RETURNING id`
+	SQL := `INSERT INTO "product"("name", "category_id", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING id`
 	var lastInsertId int
-	result := tx.QueryRowContext(ctx, SQL, product.Name, product.CategoryId, product.Price)
+	result := tx.QueryRowContext(ctx, SQL, product.Name, product.CategoryId, product.Price, product.CreatedAt, product.UpdatedAt)
 
 	err := result.Scan(&lastInsertId)
 	helper.PanicIfError(err)

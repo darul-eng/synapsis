@@ -16,9 +16,9 @@ func NewCategoryRepository() CategoryRepository {
 }
 
 func (repository *CategoryRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, category domain.Category) domain.Category {
-	SQL := `INSERT INTO "category"("name") VALUES ($1) RETURNING id`
+	SQL := `INSERT INTO "category"("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING id`
 	var lastInsertId int
-	result := tx.QueryRowContext(ctx, SQL, category.Name)
+	result := tx.QueryRowContext(ctx, SQL, category.Name, category.CreatedAt, category.UpdatedAt)
 
 	err := result.Scan(&lastInsertId)
 	helper.PanicIfError(err)

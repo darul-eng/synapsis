@@ -45,8 +45,8 @@ func (controller *CartControllerImpl) FindAll(writer http.ResponseWriter, reques
 }
 
 func (controller *CartControllerImpl) Delete(writer http.ResponseWriter, request *http.Request, params httprouter.Params) {
-	productId := params.ByName("productId")
-	id, err := strconv.Atoi(productId)
+	cartId := params.ByName("cartId")
+	id, err := strconv.Atoi(cartId)
 	helper.PanicIfError(err)
 
 	controller.CartService.Delete(request.Context(), id)

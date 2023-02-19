@@ -2,9 +2,9 @@
   "code": 200,
   "status": "OK",
   "data": {
-    "id": 1,
+    "id": 2,
     "name": "Sepatu Nike",
-    "price": 1000000,
+    "price": 1200000,
     "category_id": 1
   }
 }

@@ -9,6 +9,7 @@ import (
 	"tes-synapsis/model/api/product"
 	"tes-synapsis/model/domain"
 	"tes-synapsis/repository"
+	"time"
 )
 
 type ProductServiceImpl struct {
@@ -33,6 +34,8 @@ func (service *ProductServiceImpl) Create(ctx context.Context, request product.P
 		Name:       request.Name,
 		CategoryId: request.CategoryId,
 		Price:      request.Price,
+		CreatedAt:  time.Now(),
+		UpdatedAt:  time.Now(),
 	}
 
 	product = service.ProductRepository.Save(ctx, tx, product)

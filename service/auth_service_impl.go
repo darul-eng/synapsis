@@ -10,6 +10,7 @@ import (
 	"tes-synapsis/model/api/auth"
 	"tes-synapsis/model/domain"
 	"tes-synapsis/repository"
+	"time"
 )
 
 type AuthServiceImpl struct {
@@ -35,9 +36,11 @@ func (service *AuthServiceImpl) Register(ctx context.Context, request auth.Regis
 	helper.PanicIfError(err)
 
 	User := domain.User{
-		Username: request.Username,
-		Email:    request.Email,
-		Password: string(password),
+		Username:  request.Username,
+		Email:     request.Email,
+		Password:  string(password),
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
 	}
 
 	user := service.UserRepository.Save(ctx, tx, User)

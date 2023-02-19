@@ -9,6 +9,7 @@ import (
 	"tes-synapsis/model/api/category"
 	"tes-synapsis/model/domain"
 	"tes-synapsis/repository"
+	"time"
 )
 
 type CategoryServiceImpl struct {
@@ -30,7 +31,9 @@ func (service *CategoryServiceImpl) Create(ctx context.Context, request category
 	defer helper.CommitOrRollback(tx)
 
 	category := domain.Category{
-		Name: request.Name,
+		Name:      request.Name,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
 	}
 
 	category = service.CategoryRepository.Save(ctx, tx, category)
