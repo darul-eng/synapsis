@@ -20,7 +20,7 @@ func TestVerifyToken(t *testing.T) {
 	token, err := jwtService.GenerateToken("drlkhsn")
 	helper.PanicIfError(err)
 
-	tokens, err := jwtService.VerifyToken(token)
+	tokens, err := jwtService.VerifyToken(token + "qw")
 
 	fmt.Println(tokens.Valid)
 }

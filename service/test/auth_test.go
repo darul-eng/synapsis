@@ -6,7 +6,7 @@ import (
 	"github.com/go-playground/validator"
 	_ "github.com/lib/pq"
 	"tes-synapsis/app"
-	user "tes-synapsis/model/api/Auth"
+	user "tes-synapsis/model/api/auth"
 	"tes-synapsis/repository"
 	"tes-synapsis/service"
 	"testing"

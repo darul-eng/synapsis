@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	user "tes-synapsis/model/api/Auth"
+	"tes-synapsis/model/api/auth"
 )
 
 type AuthService interface {
-	Register(ctx context.Context, request user.RegisterRequest) user.AuthResponse
-	Login(ctx context.Context, request user.LoginRequest) user.AuthResponse
+	Register(ctx context.Context, request auth.RegisterRequest) auth.AuthResponse
+	Login(ctx context.Context, request auth.LoginRequest) auth.AuthResponse
 }

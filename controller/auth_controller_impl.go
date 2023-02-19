@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"tes-synapsis/helper"
 	"tes-synapsis/model/api"
-	user "tes-synapsis/model/api/Auth"
+	user "tes-synapsis/model/api/auth"
 	"tes-synapsis/service"
 )
 

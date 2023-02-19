@@ -18,3 +18,35 @@ Content-Type: application/json
   "username": "Ikhsan",
   "password": "darulikhsan"
 }
+
+### create category
+POST http://localhost:3000/api/category
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "name" : "Sepatu"
+}
+
+### FindById category
+GET http://localhost:3000/api/category/2
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4NzcwMDcsInVzZXJuYW1lIjoiSWtoc2FuIn0.mIhbOOkh6BvhU9b6ghp-Dp1HvcCXMuYeqh4xdrexYdY
+
+### create product
+POST http://localhost:3000/api/product
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4NzcwMDcsInVzZXJuYW1lIjoiSWtoc2FuIn0.mIhbOOkh6BvhU9b6ghp-Dp1HvcCXMuYeqh4xdrexYdY
+
+{
+  "name" : "Sepatu Nike",
+  "category_id" : 1,
+  "price" : 1000000
+}
+
+### find product by category id
+GET http://localhost:3000/api/product/2
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4NzcwMDcsInVzZXJuYW1lIjoiSWtoc2FuIn0.mIhbOOkh6BvhU9b6ghp-Dp1HvcCXMuYeqh4xdrexYdY

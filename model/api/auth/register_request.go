@@ -1,6 +1,7 @@
-package user
+package auth
 
-type LoginRequest struct {
+type RegisterRequest struct {
 	Username string `validate:"required" json:"username"`
+	Email    string `validate:"required" json:"email"`
 	Password string `validate:"required" json:"password"`
 }

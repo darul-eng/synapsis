@@ -1,8 +1,8 @@
-package domain
+package product
 
-type Product struct {
+type ProductResponse struct {
 	Id         int     `json:"id"`
 	Name       string  `json:"name"`
-	CategoryId int     `json:"category_id"`
 	Price      float64 `json:"price"`
+	CategoryId int     `json:"category_id"`
 }

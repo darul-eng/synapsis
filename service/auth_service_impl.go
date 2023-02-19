@@ -7,7 +7,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"tes-synapsis/exception"
 	"tes-synapsis/helper"
-	user "tes-synapsis/model/api/Auth"
+	"tes-synapsis/model/api/auth"
 	"tes-synapsis/model/domain"
 	"tes-synapsis/repository"
 )
@@ -23,7 +23,7 @@ func NewAuthService(userRepository repository.UserRepository, DB *sql.DB, valida
 	return &AuthServiceImpl{UserRepository: userRepository, DB: DB, Validate: validate, JWT: JWT}
 }
 
-func (service *AuthServiceImpl) Register(ctx context.Context, request user.RegisterRequest) user.AuthResponse {
+func (service *AuthServiceImpl) Register(ctx context.Context, request auth.RegisterRequest) auth.AuthResponse {
 	err := service.Validate.Struct(request)
 	helper.PanicIfError(err)
 
@@ -48,7 +48,7 @@ func (service *AuthServiceImpl) Register(ctx context.Context, request user.Regis
 	return helper.ToAuthResponse(user, token)
 }
 
-func (service *AuthServiceImpl) Login(ctx context.Context, request user.LoginRequest) user.AuthResponse {
+func (service *AuthServiceImpl) Login(ctx context.Context, request auth.LoginRequest) auth.AuthResponse {
 	err := service.Validate.Struct(request)
 	helper.PanicIfError(err)
 

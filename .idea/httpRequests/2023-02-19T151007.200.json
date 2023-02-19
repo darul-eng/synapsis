@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": {
+    "id": 4,
+    "username": "Ikhsan",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4NzcwMDcsInVzZXJuYW1lIjoiSWtoc2FuIn0.mIhbOOkh6BvhU9b6ghp-Dp1HvcCXMuYeqh4xdrexYdY"
+  }
+}
