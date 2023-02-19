@@ -5,24 +5,25 @@ import (
 	"database/sql"
 	"github.com/go-playground/validator"
 	"golang.org/x/crypto/bcrypt"
+	"tes-synapsis/exception"
 	"tes-synapsis/helper"
 	user "tes-synapsis/model/api/Auth"
 	"tes-synapsis/model/domain"
 	"tes-synapsis/repository"
 )
 
-type UserServiceImpl struct {
+type AuthServiceImpl struct {
 	UserRepository repository.UserRepository
 	DB             *sql.DB
 	Validate       *validator.Validate
 	JWT            JWTService
 }
 
-func NewUserService(userRepository repository.UserRepository, DB *sql.DB, validate *validator.Validate, JWT JWTService) UserService {
-	return &UserServiceImpl{UserRepository: userRepository, DB: DB, Validate: validate, JWT: JWT}
+func NewAuthService(userRepository repository.UserRepository, DB *sql.DB, validate *validator.Validate, JWT JWTService) AuthService {
+	return &AuthServiceImpl{UserRepository: userRepository, DB: DB, Validate: validate, JWT: JWT}
 }
 
-func (service *UserServiceImpl) Register(ctx context.Context, request user.RegisterRequest) user.AuthResponse {
+func (service *AuthServiceImpl) Register(ctx context.Context, request user.RegisterRequest) user.AuthResponse {
 	err := service.Validate.Struct(request)
 	helper.PanicIfError(err)
 
@@ -47,7 +48,7 @@ func (service *UserServiceImpl) Register(ctx context.Context, request user.Regis
 	return helper.ToAuthResponse(user, token)
 }
 
-func (service *UserServiceImpl) Login(ctx context.Context, request user.LoginRequest) user.AuthResponse {
+func (service *AuthServiceImpl) Login(ctx context.Context, request user.LoginRequest) user.AuthResponse {
 	err := service.Validate.Struct(request)
 	helper.PanicIfError(err)
 
@@ -56,10 +57,14 @@ func (service *UserServiceImpl) Login(ctx context.Context, request user.LoginReq
 	defer helper.CommitOrRollback(tx)
 
 	user, err := service.UserRepository.Find(ctx, tx, request.Username)
-	helper.PanicIfError(err)
+	if err != nil {
+		panic(exception.NewNotFoundError(err.Error()))
+	}
 
 	err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(request.Password))
-	helper.PanicIfError(err)
+	if err != nil {
+		panic(exception.NewCredentialNotMatchError(err.Error()))
+	}
 
 	token, err := service.JWT.GenerateToken(user.Username)
 	helper.PanicIfError(err)

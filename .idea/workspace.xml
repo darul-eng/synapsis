@@ -8,16 +8,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3/storage_v2/_src_/database/db_synapsis.Jx8SHw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3/storage_v2/_src_/database/db_synapsis.Jx8SHw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrations/20230218131520_create_tabel_user.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrations/20230218131520_create_tabel_user.up.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/domain/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/domain/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/CartRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/CartRepositoryImpl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/CategoryResositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/CategoryResositoryImpl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/ProductRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/ProductRepositoryImpl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/TransactionRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/TransactionRepositoryImpl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/UserRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/UserRepository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/UserRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/UserRepositoryImpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/CartRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/cart_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/CartRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/cart_repository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/CategoryRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/category_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/CategoryResositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/category_resository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/ProductRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/product_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/ProductRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/product_repository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/TransactionRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/transaction_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/TransactionRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/transaction_repository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/UserRepository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/user_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/UserRepositoryImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/user_repository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/JWTService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/jwt_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/JWTServiceImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/jwt_service_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/UserServiceImpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth_service_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/test/auth_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/test/auth_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +34,8 @@
       <list>
         <option value="OpenAPI" />
         <option value="Go File" />
+        <option value="Go Application" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -47,61 +54,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/ubuntu/New Volume/4-PROJECT/tes-synapsis/helper&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go Application",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/media/ubuntu/New Volume/4-PROJECT/tes-synapsis/exception",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.keymap"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/exception" />
       <recent name="$PROJECT_DIR$/helper" />
       <recent name="$PROJECT_DIR$/model/web" />
       <recent name="$PROJECT_DIR$/model/web/User" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestLogin in tes-synapsis/service/test">
-    <configuration name="TestCreateUser in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build tes-synapsis">
+    <configuration name="go build tes-synapsis" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tes-synapsis" />
-      <working_directory value="$PROJECT_DIR$/service/test" />
-      <root_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="tes-synapsis/service/test" />
+      <package value="tes-synapsis" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestCreateUser\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestGenerateToken in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="tes-synapsis" />
-      <working_directory value="$PROJECT_DIR$/service/test" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="tes-synapsis/service/test" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestGenerateToken\E$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="TestLogin in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -128,16 +121,10 @@
       <pattern value="^\QTestRegister\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestVerifyToken in tes-synapsis/service/test" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="tes-synapsis" />
-      <working_directory value="$PROJECT_DIR$/service/test" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="tes-synapsis/service/test" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestVerifyToken\E$" />
+    <configuration name="test | login user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="2" requestIdentifier="login user" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test | register user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" requestIdentifier="register user" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration default="true" type="SwaggerCodegen">
@@ -158,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build tes-synapsis" />
+        <item itemvalue="HTTP Request.test | login user" />
+        <item itemvalue="HTTP Request.test | register user" />
         <item itemvalue="Go Test.TestLogin in tes-synapsis/service/test" />
         <item itemvalue="Go Test.TestRegister in tes-synapsis/service/test" />
-        <item itemvalue="Go Test.TestCreateUser in tes-synapsis/service/test" />
-        <item itemvalue="Go Test.TestVerifyToken in tes-synapsis/service/test" />
-        <item itemvalue="Go Test.TestGenerateToken in tes-synapsis/service/test" />
       </list>
     </recent_temporary>
   </component>

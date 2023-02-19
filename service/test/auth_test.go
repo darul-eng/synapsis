@@ -18,7 +18,7 @@ func TestRegister(t *testing.T) {
 
 	userRepository := repository.NewUserRepository()
 	jwtService := service.NewJwtService()
-	userService := service.NewUserService(userRepository, db, validate, jwtService)
+	userService := service.NewAuthService(userRepository, db, validate, jwtService)
 
 	user := user.RegisterRequest{
 		Username: "Darul Ikhsan",
@@ -36,11 +36,11 @@ func TestLogin(t *testing.T) {
 
 	userRepository := repository.NewUserRepository()
 	jwtService := service.NewJwtService()
-	userService := service.NewUserService(userRepository, db, validate, jwtService)
+	userService := service.NewAuthService(userRepository, db, validate, jwtService)
 
 	login := user.LoginRequest{
 		Username: "Darul Ikhsan",
-		Password: "darulikhsan1234",
+		Password: "darulikhan1234",
 	}
 
 	response := userService.Login(context.Background(), login)

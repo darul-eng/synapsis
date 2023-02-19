@@ -1,0 +1,20 @@
+### register user
+POST http://localhost:3000/api/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Ikhsan",
+  "email": "ikhsan@gmail.com",
+  "password": "darulikhsan"
+}
+
+### login user
+POST http://localhost:3000/api/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "Ikhsan",
+  "password": "darulikhsan"
+}
