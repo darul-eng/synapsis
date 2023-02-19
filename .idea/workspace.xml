@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92115583-9f76-4c5e-b294-465e9bf8e86e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3/storage_v2/_src_/database/db_synapsis.Jx8SHw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ddaef5e0-8ef6-469f-8313-b94360ff5ec3/storage_v2/_src_/database/db_synapsis.Jx8SHw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/auth_controller_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth_controller_impl.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/helper/response.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/api/Auth/auth_response.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/api/Auth/login_request.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/api/auth/login_request.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/api/Auth/register_request.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/api/auth/register_request.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/domain/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/domain/product.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/product_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/product_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/product_repository_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/product_repository_impl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/auth_service_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth_service_impl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/test/auth_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/test/auth_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/test/generateToken_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/test/generateToken_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/domain/cart.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/domain/cart.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/cart_repository_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/cart_repository_impl.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +77,7 @@
       <recent name="$PROJECT_DIR$/model/web/User" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build tes-synapsis">
+  <component name="RunManager" selected="HTTP Request.test | get list product in cart">
     <configuration name="go build tes-synapsis" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tes-synapsis" />
       <working_directory value="$PROJECT_DIR$" />
@@ -98,16 +87,16 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="test | FindById category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="4" requestIdentifier="FindById category" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="test | create category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="3" requestIdentifier="create category" runType="Run single request">
+    <configuration name="test | add product to cart" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="7" requestIdentifier="add product to cart" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="test | create product" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="5" requestIdentifier="create product" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | find product by category id" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="6" requestIdentifier="find product by category id" runType="Run single request">
+    <configuration name="test | delete product from cart" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="9" requestIdentifier="delete product from cart" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test | get list product in cart" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="8" requestIdentifier="get list product in cart" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration default="true" type="SwaggerCodegen">
@@ -128,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build tes-synapsis" />
-        <item itemvalue="HTTP Request.test | find product by category id" />
-        <item itemvalue="HTTP Request.test | FindById category" />
+        <item itemvalue="HTTP Request.test | get list product in cart" />
+        <item itemvalue="HTTP Request.test | add product to cart" />
+        <item itemvalue="HTTP Request.test | delete product from cart" />
         <item itemvalue="HTTP Request.test | create product" />
-        <item itemvalue="HTTP Request.test | create category" />
+        <item itemvalue="Go Build.go build tes-synapsis" />
       </list>
     </recent_temporary>
   </component>

@@ -1,0 +1,23 @@
+{
+  "code": 500,
+  "status": "INTERNAL SERVER ERROR",
+  "data": {
+    "Severity": "ERROR",
+    "Code": "42712",
+    "Message": "table name \"t2\" specified more than once",
+    "Detail": "",
+    "Hint": "",
+    "Position": "",
+    "InternalPosition": "",
+    "InternalQuery": "",
+    "Where": "",
+    "Schema": "",
+    "Table": "",
+    "Column": "",
+    "DataTypeName": "",
+    "Constraint": "",
+    "File": "parse_relation.c",
+    "Line": "420",
+    "Routine": "checkNameSpaceConflicts"
+  }
+}

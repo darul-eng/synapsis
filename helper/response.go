@@ -2,6 +2,7 @@ package helper
 
 import (
 	"tes-synapsis/model/api/auth"
+	"tes-synapsis/model/api/cart"
 	category "tes-synapsis/model/api/category"
 	"tes-synapsis/model/api/product"
 	"tes-synapsis/model/domain"
@@ -38,4 +39,24 @@ func ToProductResponses(datas []domain.Product) []product.ProductResponse {
 	}
 
 	return products
+}
+
+func ToCartResponse(data domain.Cart) cart.CartResponse {
+	return cart.CartResponse{
+		Id:        data.Id,
+		ProductId: data.ProductId,
+		Name:      data.Name,
+		Amount:    data.Amount,
+		Price:     data.Price,
+		Category:  data.Category,
+	}
+}
+
+func ToCartResponses(datas []domain.Cart) []cart.CartResponse {
+	var carts []cart.CartResponse
+	for _, cart := range datas {
+		carts = append(carts, ToCartResponse(cart))
+	}
+
+	return carts
 }

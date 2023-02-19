@@ -34,7 +34,7 @@ func (repository *CartRepositoryImpl) Delete(ctx context.Context, tx *sql.Tx, Id
 }
 
 func (repository *CartRepositoryImpl) FindAll(ctx context.Context, tx *sql.Tx) []domain.Cart {
-	SQL := `SELECT "id", "product_id", "amount" FROM "cart"`
+	SQL := `SELECT t1.id, t1.product_id, t2.name, t1.amount, t2.price, t3.name FROM cart AS t1 JOIN product AS t2 ON t1.product_id = t2.id JOIN category AS t3 ON t2.category_id = t3.id`
 	rows, err := tx.QueryContext(ctx, SQL)
 	helper.PanicIfError(err)
 	defer rows.Close()
@@ -42,7 +42,7 @@ func (repository *CartRepositoryImpl) FindAll(ctx context.Context, tx *sql.Tx) [
 	var carts []domain.Cart
 	for rows.Next() {
 		cart := domain.Cart{}
-		err := rows.Scan(&cart.Id, &cart.ProductId, &cart.Amount)
+		err := rows.Scan(&cart.Id, &cart.ProductId, &cart.Name, &cart.Amount, &cart.Price, &cart.Category)
 		helper.PanicIfError(err)
 
 		carts = append(carts, cart)

@@ -1,0 +1,10 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": {
+    "id": 2,
+    "name": "Sepatu Adidas",
+    "price": 1200000,
+    "category_id": 1
+  }
+}

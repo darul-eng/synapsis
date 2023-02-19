@@ -1,0 +1,14 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "name": "Sepatu Nike",
+      "amount": 1,
+      "price": 1000000,
+      "category": "Sepatu"
+    }
+  ]
+}

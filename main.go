@@ -34,6 +34,11 @@ func main() {
 	productService := service.NewProductService(productRepository, db, validate)
 	productController := controller.NewProductController(productService)
 
+	//cart
+	cartRepository := repository.NewCartRepository()
+	cartService := service.NewCartService(cartRepository, db, validate)
+	cartController := controller.NewCartController(cartService)
+
 	router := httprouter.New()
 
 	router.POST("/api/register", authController.Register)
@@ -42,7 +47,9 @@ func main() {
 	router.GET("/api/category/:categoryId", categoryController.FindById)
 	router.POST("/api/product", productController.Create)
 	router.GET("/api/product/:categoryId", productController.FindByCategoryId)
-	//router.GET("/api/product/:productId", productController.FindById)
+	router.POST("/api/cart", cartController.Create)
+	router.GET("/api/cart", cartController.FindAll)
+	router.DELETE("/api/cart/:productId", cartController.Delete)
 
 	router.PanicHandler = exception.ErrorHandler
 

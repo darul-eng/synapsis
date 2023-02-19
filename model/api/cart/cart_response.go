@@ -1,6 +1,6 @@
-package domain
+package cart
 
-type Cart struct {
+type CartResponse struct {
 	Id        int     `json:"id"`
 	ProductId int     `json:"product_id"`
 	Name      string  `json:"name"`
