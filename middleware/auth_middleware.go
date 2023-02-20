@@ -1,6 +1,8 @@
 package middleware
 
 import (
+	"context"
+	"github.com/dgrijalva/jwt-go"
 	"net/http"
 	"tes-synapsis/helper"
 	"tes-synapsis/model/api"
@@ -18,7 +20,7 @@ func NewAuthMiddleware(handler http.Handler, jwtService service.JWTService) *Aut
 
 func (middleware *AuthMiddleware) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
 
-	if request.RequestURI == "/api/login" || request.RequestURI == "/api/register" {
+	if request.RequestURI == "/api/login" || request.RequestURI == "/api/register" || request.RequestURI == "/api/transaction/notification" {
 		middleware.Handler.ServeHTTP(writer, request)
 	} else {
 		token, err := middleware.jwtService.VerifyToken(request.Header.Get("API-KEY"))
@@ -33,7 +35,9 @@ func (middleware *AuthMiddleware) ServeHTTP(writer http.ResponseWriter, request 
 			helper.WriteToResponseBody(writer, apiResponse)
 		} else {
 			if token.Valid {
-				middleware.Handler.ServeHTTP(writer, request)
+				claims := token.Claims.(jwt.MapClaims)
+				ctx := context.WithValue(request.Context(), "user", claims["username"])
+				middleware.Handler.ServeHTTP(writer, request.WithContext(ctx))
 			} else {
 				writer.Header().Set("Content-Type", "application/json")
 				writer.WriteHeader(http.StatusUnauthorized)

@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": {
+    "id": 1,
+    "username": "darul",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY5NDY2MTUsInVzZXJuYW1lIjoiZGFydWwifQ.ptEgTs_xYuYpor_NtSsy3cgPLJapy5ii-o--WLZpXXI"
+  }
+}

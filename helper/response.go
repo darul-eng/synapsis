@@ -64,9 +64,22 @@ func ToCartResponses(datas []domain.Cart) []cart.CartResponse {
 
 func ToTransactionResponse(data domain.Transaction) transaction.TransactionResponse {
 	return transaction.TransactionResponse{
-		Id:        data.Id,
-		Amount:    data.Amount,
-		Status:    data.Status,
-		CreatedAt: data.CreatedAt,
+		Id:         data.Id,
+		UserId:     data.UserId,
+		Amount:     data.Amount,
+		Status:     data.Status,
+		PaymentURL: data.PaymentURL,
+		User:       toUserTransaction(data.User),
+		CreatedAt:  data.CreatedAt,
+	}
+}
+
+func toUserTransaction(user domain.User) domain.UserTransaction {
+	return domain.UserTransaction{
+		Id:        user.Id,
+		Username:  user.Username,
+		Email:     user.Email,
+		CreatedAt: user.CreatedAt,
+		UpdatedAt: user.UpdatedAt,
 	}
 }

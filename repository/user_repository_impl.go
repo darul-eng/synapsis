@@ -29,14 +29,14 @@ func (repository *UserRepositoryImpl) Save(ctx context.Context, tx *sql.Tx, user
 }
 
 func (repository *UserRepositoryImpl) Find(ctx context.Context, tx *sql.Tx, username string) (domain.User, error) {
-	SQL := `SELECT "id", "username", "password" FROM "user" WHERE "username" = $1`
+	SQL := `SELECT "id", "username", "password", "email" FROM "user" WHERE "username" = $1`
 	rows, err := tx.QueryContext(ctx, SQL, username)
 	helper.PanicIfError(err)
 	defer rows.Close()
 
 	user := domain.User{}
 	if rows.Next() {
-		err := rows.Scan(&user.Id, &user.Username, &user.Password)
+		err := rows.Scan(&user.Id, &user.Username, &user.Password, &user.Email)
 		helper.PanicIfError(err)
 
 		return user, nil

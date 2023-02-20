@@ -1,0 +1,18 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": {
+    "id": 2,
+    "user_id": 1,
+    "amount": 1000000,
+    "status": "pending",
+    "user": {
+      "id": 1,
+      "username": "darul",
+      "email": "darul@gmail.com",
+      "created_at": "0001-01-01T00:00:00Z",
+      "updated_at": "0001-01-01T00:00:00Z"
+    },
+    "created_at": "2023-02-20T10:32:01.637054463+08:00"
+  }
+}

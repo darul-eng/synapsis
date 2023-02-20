@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/go-playground/validator"
+	"github.com/joho/godotenv"
 	"github.com/julienschmidt/httprouter"
 	_ "github.com/lib/pq"
 	"net/http"
@@ -15,6 +16,9 @@ import (
 )
 
 func main() {
+	err := godotenv.Load()
+	helper.PanicIfError(err)
+
 	db := app.NewDB()
 	validate := validator.New()
 
@@ -39,9 +43,14 @@ func main() {
 	cartService := service.NewCartService(cartRepository, db, validate)
 	cartController := controller.NewCartController(cartService)
 
-	//transaction
 	transactionRepository := repository.NewTransactionRepository()
-	transactionService := service.NewTransactionService(transactionRepository, db, validate)
+
+	//payment
+	paymentService := service.NewPaymentService(db, validate, transactionRepository)
+	paymentController := controller.NewPaymentController(paymentService)
+
+	//transaction
+	transactionService := service.NewTransactionService(transactionRepository, db, validate, userRepository, paymentService)
 	transactionController := controller.NewTransactionController(transactionService)
 
 	router := httprouter.New()
@@ -55,7 +64,8 @@ func main() {
 	router.POST("/api/cart", cartController.Create)
 	router.GET("/api/cart", cartController.FindAll)
 	router.DELETE("/api/cart/:cartId", cartController.Delete)
-	router.POST("/api/cart/shipment", transactionController.Create)
+	router.POST("/api/transaction", transactionController.Create)
+	router.POST("/api/transaction/notification", paymentController.GetNotification)
 
 	router.PanicHandler = exception.ErrorHandler
 
@@ -64,6 +74,6 @@ func main() {
 		Handler: middleware.NewAuthMiddleware(router, jwtService),
 	}
 
-	err := server.ListenAndServe()
+	err = server.ListenAndServe()
 	helper.PanicIfError(err)
 }

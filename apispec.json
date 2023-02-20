@@ -440,7 +440,7 @@
       "JWT" : {
         "type": "apiKey",
         "in": "header",
-        "name": "token",
+        "name": "API-KEY",
         "description": "Authentication for API"
       }
     },

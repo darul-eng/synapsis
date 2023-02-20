@@ -1,0 +1,19 @@
+{
+  "code": 200,
+  "status": "OK",
+  "data": {
+    "id": 3,
+    "user_id": 1,
+    "amount": 1000000,
+    "status": "pending",
+    "payment_url": "https://app.sandbox.midtrans.com/snap/v3/redirection/3f29e0a3-fe29-4b68-8ae9-ee5b822d2b4c",
+    "user": {
+      "id": 1,
+      "username": "darul",
+      "email": "darul@gmail.com",
+      "created_at": "0001-01-01T00:00:00Z",
+      "updated_at": "0001-01-01T00:00:00Z"
+    },
+    "created_at": "2023-02-20T10:33:26.935766679+08:00"
+  }
+}

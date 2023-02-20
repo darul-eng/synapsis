@@ -1,5 +1,0 @@
-{
-  "code": 400,
-  "status": "BAD REQUEST",
-  "data": "Key: 'TransactionCreateRequest.ProductId' Error:Field validation for 'ProductId' failed on the 'min' tag"
-}
