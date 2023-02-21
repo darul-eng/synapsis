@@ -1,6 +1,348 @@
 POST http://localhost:3000/api/transaction
 Accept: application/json
 Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 3,
+  "amount": 10000
+}
+
+<> 2023-02-21T120626.200.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 3,
+  "amount": 10000
+}
+
+<> 2023-02-21T114932.200.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 3,
+  "amount": 10000
+}
+
+<> 2023-02-21T114552.200.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 2,
+  "amount": 10000
+}
+
+<> 2023-02-21T114426.500.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 2,
+  "amount": 10000
+}
+
+<> 2023-02-21T114229.500.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 2,
+  "amount": 10000
+}
+
+<> 2023-02-21T113814.200.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY5NDY2MTUsInVzZXJuYW1lIjoiZGFydWwifQ.ptEgTs_xYuYpor_NtSsy3cgPLJapy5ii-o--WLZpXXI
+Content-Length: 37
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user_id": 2,
+  "amount": 10000
+}
+
+<> 2023-02-21T113802.401.json
+
+###
+
+GET http://localhost:3000/api/cart
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T113456.200.json
+
+###
+
+GET http://localhost:3000/api/cart
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY5NDY2MTUsInVzZXJuYW1lIjoiZGFydWwifQ.ptEgTs_xYuYpor_NtSsy3cgPLJapy5ii-o--WLZpXXI
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T113435.401.json
+
+###
+
+POST http://localhost:3000/api/cart
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "product_id": 2
+}
+
+<> 2023-02-21T113356.200.json
+
+###
+
+GET http://localhost:3000/api/product/7
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T113219.404.json
+
+###
+
+GET http://localhost:3000/api/product/1
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T113213.200.json
+
+###
+
+GET http://localhost:3000/api/product/1
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY5NDY2MTUsInVzZXJuYW1lIjoiZGFydWwifQ.ptEgTs_xYuYpor_NtSsy3cgPLJapy5ii-o--WLZpXXI
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T113158.401.json
+
+###
+
+POST http://localhost:3000/api/categor
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "Pakaian"
+}
+
+<> 2023-02-21T112437.404.txt
+
+###
+
+POST http://localhost:3000/api/categor
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsnR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "Pakaian"
+}
+
+<> 2023-02-21T112426.401.json
+
+###
+
+POST http://localhost:3000/api/category
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsnR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "Pakaian"
+}
+
+<> 2023-02-21T112412.401.json
+
+###
+
+POST http://localhost:3000/api/category
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 17
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : ""
+}
+
+<> 2023-02-21T112229.400.json
+
+###
+
+GET http://localhost:3000/api/category/4
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T112121.404.json
+
+###
+
+POST http://localhost:3000/api/product
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 66
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "Baju Kaos",
+  "category_id" : 2,
+  "price" : 50000
+}
+
+<> 2023-02-21T111001.200.json
+
+###
+
+GET http://localhost:3000/api/category/2
+Accept: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-21T110915.200.json
+
+###
+
+POST http://localhost:3000/api/category
+Accept: application/json
+Content-Type: application/json
+API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzcwMzUzMTAsInVzZXJuYW1lIjoiZGFydWwgaWtoc2FuIn0.Y8xqVJSmQxpejgrStsCXfLiWKiwAaBhHNnoGfAUmRLo
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name" : "Pakaian"
+}
+
+<> 2023-02-21T110859.200.json
+
+###
+
+POST http://localhost:3000/api/register
+Accept: application/json
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "darul ikhsan",
+  "email": "darul@gmail.com",
+  "password": "darulikhsan"
+}
+
+<> 2023-02-21T110830.200.json
+
+###
+
+POST http://localhost:3000/api/transaction
+Accept: application/json
+Content-Type: application/json
 API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY5NDY2MTUsInVzZXJuYW1lIjoiZGFydWwifQ.ptEgTs_xYuYpor_NtSsy3cgPLJapy5ii-o--WLZpXXI
 Content-Length: 39
 Connection: Keep-Alive
@@ -477,343 +819,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2023-02-20T090922.200.json
-
-###
-
-POST http://localhost:3000/api/transaction
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T232615.200.json
-
-###
-
-POST http://localhost:3000/api/transaction
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T232521.200.json
-
-###
-
-POST http://localhost:3000/api/transaction
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T232113.200.json
-
-###
-
-POST http://localhost:3000/api/cart/shipment
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T232041.405.txt
-
-###
-
-GET http://localhost:3000/api/category/1
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T231334.200.json
-
-###
-
-GET http://localhost:3000/api/category/1
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T231009.200.json
-
-###
-
-POST http://localhost:3000/api/cart/shipment
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T202659.200.json
-
-###
-
-POST http://localhost:3000/api/cart/shipment
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T202536.500.json
-
-###
-
-POST http://localhost:3000/api/cart/shipment
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user_id": 1,
-  "amount": 1000000
-}
-
-<> 2023-02-19T202512.500.json
-
-###
-
-GET http://localhost:3000/api/cart
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T202451.200.json
-
-###
-
-POST http://localhost:3000/api/cart
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "product_id": 2
-}
-
-<> 2023-02-19T202446.200.json
-
-###
-
-GET http://localhost:3000/api/cart
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T202439.200.json
-
-###
-
-DELETE http://localhost:3000/api/cart/2
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T202436.200.json
-
-###
-
-GET http://localhost:3000/api/cart
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T202247.200.json
-
-###
-
-POST http://localhost:3000/api/cart
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "product_id": 2
-}
-
-<> 2023-02-19T202234.200.json
-
-###
-
-POST http://localhost:3000/api/product
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 70
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "Sepatu Nike",
-  "category_id" : 1,
-  "price" : 1200000
-}
-
-<> 2023-02-19T202225.200.json
-
-###
-
-POST http://localhost:3000/api/cart
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "product_id": 1
-}
-
-<> 2023-02-19T202209.200.json
-
-###
-
-GET http://localhost:3000/api/product/1
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T202149.200.json
-
-###
-
-POST http://localhost:3000/api/product
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 72
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "Sepatu Adidas",
-  "category_id" : 1,
-  "price" : 1200000
-}
-
-<> 2023-02-19T202126.200.json
-
-###
-
-GET http://localhost:3000/api/category/1
-Accept: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-02-19T202113.200.json
-
-###
-
-POST http://localhost:3000/api/category
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 23
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "Sepatu"
-}
-
-<> 2023-02-19T202038.200.json
-
-###
-
-POST http://localhost:3000/api/category
-Accept: application/json
-Content-Type: application/json
-API-KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzY4OTQ3NzEsInVzZXJuYW1lIjoiSWtoc2FuIn0.liVzDYGsCZjgokOpHJgMfodruFdTig33MdVIoxgWqP8
-Content-Length: 23
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name" : "Sepatu"
-}
-
-<> 2023-02-19T201734.500.json
 
 ###
 

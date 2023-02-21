@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"database/sql"
+	"errors"
 	"github.com/go-playground/validator"
 	"tes-synapsis/exception"
 	"tes-synapsis/helper"
@@ -35,6 +36,10 @@ func (service *TransactionServiceImpl) Create(ctx context.Context, request trans
 	user, err := service.UserRepository.Find(ctx, tx, ctx.Value("user").(string))
 	if err != nil {
 		panic(exception.NewNotFoundError(err.Error()))
+	}
+
+	if request.UserId != user.Id {
+		panic(errors.New("user is not found"))
 	}
 
 	transaction := domain.Transaction{

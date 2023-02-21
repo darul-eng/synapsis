@@ -126,7 +126,255 @@
         }
       }
     },
-    "/products/{categoryId}": {
+    "/category":{
+      "post": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Product Category API"],
+        "summary": "Add New Product Category",
+        "description": "Add New Product Category",
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name" : {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success Add Product Category",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "name" : {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed Add Product Category",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 500
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Product Category API"],
+        "summary": "Get Product Category by ID",
+        "description": "Get Product Category by ID",
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "description": "Category Id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Get Product Category",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "object",
+                      "properties": {
+                        "id" : {
+                          "type": "number"
+                        },
+                        "name" : {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product Category Not Found",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product" : {
+      "post": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Products API"],
+        "summary": "Add New Product",
+        "description": "Add New Product",
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name" : {
+                    "type": "string"
+                  },
+                  "category_id" : {
+                    "type": "number"
+                  },
+                  "price" : {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success Add Product",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "name" : {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Failed Add Product",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 400
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/{categoryId}": {
       "get": {
         "security": [{
           "JWT" : []
@@ -161,6 +409,27 @@
                       "items": {
                         "$ref": "#/components/schemas/Products"
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product Not Found",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "string"
                     }
                   }
                 }
@@ -267,6 +536,28 @@
               }
             }
           },
+          "400": {
+            "description": "Failed Add Product to Cart",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number",
+                      "default": 400
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "500": {
             "description": "Failed Add Product to Cart",
             "content": {
@@ -289,7 +580,7 @@
         }
       }
     },
-    "/cart/{productId}" : {
+    "/cart/{cartId}" : {
       "delete": {
         "security": [{
           "JWT" : []
@@ -299,10 +590,10 @@
         "description": "Delete Product from Cart",
         "parameters": [
           {
-            "name": "productId",
+            "name": "cartId",
             "in": "path",
             "required": true,
-            "description": "Product Id"
+            "description": "Cart Id"
           }
         ],
         "responses": {
@@ -347,12 +638,12 @@
         }
       }
     },
-    "/cart/shipment" : {
+    "/cart/transaction" : {
       "post": {
         "security": [{
           "JWT" : []
         }],
-        "tags": ["Products API"],
+        "tags": ["Transaction API"],
         "summary": "Checkout Product",
         "description": "Checkout Product",
         "requestBody": {
@@ -402,6 +693,23 @@
                         "status" : {
                           "type": "string"
                         },
+                        "payment_url" : {
+                          "type": "string"
+                        },
+                        "user" : {
+                          "type": "object",
+                          "properties": {
+                            "id" : {
+                              "type": "number"
+                            },
+                            "username" : {
+                              "type": "string"
+                            },
+                            "email" : {
+                              "type": "string"
+                            }
+                          }
+                        },
                         "created_at" : {
                           "type": "string"
                         }
@@ -425,6 +733,106 @@
                     },
                     "status": {
                       "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart/transaction/notification" : {
+      "post": {
+        "security": [{
+          "JWT" : []
+        }],
+        "tags": ["Transaction API"],
+        "summary": "Notification from Midtrans",
+        "description": "Notification from Midtrans",
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "transaction_status" : {
+                    "type": "string"
+                  },
+                  "order_id" : {
+                    "type": "string"
+                  },
+                  "payment_type" : {
+                    "type": "string"
+                  },
+                  "fraud_status" : {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success Add Product to Shipment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number",
+                      "default": 200
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "object",
+                      "properties": {
+                        "id" : {
+                          "type": "number"
+                        },
+                        "user_id" : {
+                          "type": "number"
+                        },
+                        "amount" : {
+                          "type": "number"
+                        },
+                        "status" : {
+                          "type": "string"
+                        },
+                        "payment_url" : {
+                          "type": "string"
+                        },
+                        "user" : {
+                          "type": "object",
+                          "properties": {
+                            "id" : {
+                              "type": "number"
+                            },
+                            "username" : {
+                              "type": "string"
+                            },
+                            "email" : {
+                              "type": "string"
+                            },
+                            "created_at" : {
+                              "type": "string"
+                            },
+                            "updated_at" : {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "created_at" : {
+                          "type": "string"
+                        },
+                        "updated_at" : {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 }

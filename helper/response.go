@@ -76,10 +76,8 @@ func ToTransactionResponse(data domain.Transaction) transaction.TransactionRespo
 
 func toUserTransaction(user domain.User) domain.UserTransaction {
 	return domain.UserTransaction{
-		Id:        user.Id,
-		Username:  user.Username,
-		Email:     user.Email,
-		CreatedAt: user.CreatedAt,
-		UpdatedAt: user.UpdatedAt,
+		Id:       user.Id,
+		Username: user.Username,
+		Email:    user.Email,
 	}
 }
