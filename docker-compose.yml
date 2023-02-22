@@ -1,0 +1,41 @@
+version: "3.7"
+services:
+  api:
+    image: drlkhsn/synapsis
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - MIDCLIENT_SERVERKEY=${MIDCLIENT_SERVERKEY}
+      - MIDCLIENT_CLIENTKEY=${MIDCLIENT_SERVERKEY}
+    restart: on-failure
+    depends_on:
+      - database
+    networks:
+      - learning
+  database:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    networks:
+      - learning
+  migrate:
+    image: migrate/migrate
+    networks:
+      - learning
+    volumes:
+      - .:/migrations
+    command: ["-path", "/migrations/db/migrations", "-database", "postgres://darul:mysecretpassword@database:5432/db_synapsis?sslmode=disable", "up"]
+    depends_on:
+      - database
+networks:
+  learning : {}

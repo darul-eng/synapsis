@@ -70,7 +70,7 @@ func main() {
 	router.PanicHandler = exception.ErrorHandler
 
 	server := http.Server{
-		Addr:    "localhost:3000",
+		Addr:    "0.0.0.0:3000",
 		Handler: middleware.NewAuthMiddleware(router, jwtService),
 	}
 
