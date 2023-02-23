@@ -26,14 +26,10 @@ Sebelum menggunakan aplikasi ini pastikan anda telah memenuhi prasyarat sebagai 
 
 Untuk Menggunakan Aplikasi ini, dapat melalui dua cara oleh karena itu anda perlu melakukan konfigurasi terlebih dahulu. Berikut ini adalah cara melakukan konfigurasi:
 
-#### Jika menggunakan image aplikasi dari docker hub
-
-#### Jika melakukan clone project dari GitHub
-
 1. Clone repository `git@github.com:darul-eng/synapsis.git` ini ke mesin lokal anda.
 2. Buat file .env dari duplikasi file .env_example. Sesuaikan konfigurasi dengan kebutuhan anda.
-3. Jalankan perintah `go mod download` untuk mengunduh semua dependensi yang di butuhkan.
-4. Jalankan aplikasi dengan perintah `go run main.go`
+3. Pastikan docker compose telah terinstall. Kemudian jalankan perintah `docker compose up`
+4. Jika terjadi server error. Hentikan container yang berjalan dengan cara `ctrl+c` kemudian jalankan kembali perintah `docker compose up` 
 
 ### Endpoints
 
